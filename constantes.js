@@ -1,11 +1,15 @@
-const DB_HOST="127.0.0.1:27017";
-const DB_NAME='miapp';
-const DB_USER="";
-const DB_PASSWORD="";
+require("dotenv").config();
 
-module.exports={
+const DB_HOST = process.env.DB_HOST;
+const DB_NAME = process.env.DB_NAME;
+const DB_USER = process.env.DB_USER;
+const DB_PASSWORD = process.env.DB_PASSWORD;
+const PORT = process.env.PORT || 4000;
+
+module.exports = {
     DB_HOST,
     DB_NAME,
+    DB_USER,
     DB_PASSWORD,
-    DB_USER
+    PORT
 }
